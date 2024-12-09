@@ -8,7 +8,6 @@ class StaticSample {
 	
 	public static int input;
 	public static void staticMethod() {}
-	
 }
 
 public class Exam_Static {

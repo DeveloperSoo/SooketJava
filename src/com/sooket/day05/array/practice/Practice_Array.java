@@ -276,7 +276,9 @@ public class Practice_Array {
 
 	
 	public void practice12() {
-		System.out.println("practice11");
+		Scanner sc = new Scanner(System.in);
+		System.out.print("문자열 : ");
+		String word = sc.next();
 	}
 	
 }

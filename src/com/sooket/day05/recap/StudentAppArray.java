@@ -2,6 +2,8 @@ package com.sooket.day05.recap;
 
 import java.util.Scanner;
 
+
+
 public class StudentAppArray {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
@@ -27,7 +29,7 @@ public class StudentAppArray {
 				scores[2] = sc.nextInt();
 				break;
 			case 2: 
-				System.out.println("===== 성적입력 ====="); 
+				System.out.println("===== 성적출력 ====="); 
 				System.out.println("국어 : " + scores[0]);
 				System.out.println("영어 : " + scores[1]);
 				System.out.println("수학 : " + scores[2]);
