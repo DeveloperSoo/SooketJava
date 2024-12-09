@@ -21,7 +21,7 @@ public class Exam_Array {
 		
 		//System.out.println(nums[10]); //ArrayIndexOutOfBoundsException 
 		
-		// for문으로 데이터 저장
+		// for문으로 데이터 저장 num[i]에 순차적으로 데이터 기임
 			for(int i = 0; i < 10; i++) 
 					nums[i] = (i+1); // 인덱스를 활용하여 값을 순차적으로 저장
 
