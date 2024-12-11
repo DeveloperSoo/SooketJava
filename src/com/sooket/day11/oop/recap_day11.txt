@@ -1,0 +1,62 @@
+1. 상속
+2. 업캐스팅 / 다운캐스팅
+3. 오버라이딩/오버로딩
+4. 추상메소드와 추상클래스
+
+ - 상속
+class Car{}
+class Sonata extends Car{} //Sonata 클래스는 Car클래스를 상속받는다
+
+ - 업캐스팅
+Car car = new Sonata();
+
+public void showSkills(Car car) {}
+
+Sonata sonata = new Sonata();
+showSkills(sonata)
+
+ - 오버라이딩
+class Shape{
+	public void draw() {
+		//부모 클래스 코드 작성
+	}
+}
+
+class Line extends Shape{
+	@override
+	public void draw() {
+		// 코드 재작성 여기가 오버라이딩
+	}
+}
+
+ - 추상메소드와 클래스
+class abstract Shape{
+	private String name;
+	private String color;
+	public void showColor() {} // 메소드
+	public abstract void draw(); // 중괄호 삭제해야함, 추상메소드이기 때문에
+		//부모 클래스 코드 작성
+}
+
+class Line extends Shape{
+	@override // 추상클래스인 Shape를 상속했기 때문에 오버라이딩이 강제가됨
+	public void draw() {
+		// 강제성에 의해 오버라이딩 진행
+	}
+}
+
+Shape shape = new Shape() -> 불가능함/ 추상클래스이기 때문에 객체 생성 불가
+Shape shape = new Line() => 가능 / 업캐스팅으로 객체 생성 가능
+
+- 인터페이스 
+interface PhoneInterface { //인터페이스는 상수랑 추상메소드만 사용가능
+	public static final int TIME_OUT = 10000;
+	public abstract void showLOgo(); // 뒤에 {}생략 추상메소드는 중괄호 안씀
+	void sendCall(); // public abstract 생략 가능함, 어차피 추상메소드만 가능하기 때문임 
+}
+
+- Object 클래스
+모든 클래스의 조상클래스
+toString(), equals() -> 사용가능하게되는 이유가 Object가 저 메소드들을 가지고있기 때문임
+
+
