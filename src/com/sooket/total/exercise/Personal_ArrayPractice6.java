@@ -3,7 +3,7 @@ package com.sooket.total.exercise;
 
 import java.util.Scanner;
 
-public class Personal_ArrayPractice6 {
+public class Personal_ArrayPractice6 { //배열
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		System.out.print("숫자 : ");
