@@ -2,7 +2,7 @@ package com.sooket.day14.collection.student;
 
 import java.util.List;
 import java.util.Scanner;
-
+//집에서 연습하기
 public class StudentController {
 	public static void main(String[] args) {
 		StudentView view = new StudentView();
