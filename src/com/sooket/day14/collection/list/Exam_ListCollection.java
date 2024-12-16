@@ -6,7 +6,7 @@ import java.util.List;
 public class Exam_ListCollection {
 	
 	public static void main(String[] args) {
-		/*
+		/* 인터페이스
 		 * List 인터페이스가 있음.
 		 * List 인터페이스를 구현하여 만든 클래스가 있음
 		 * 데이터의 순서를 유지하고 중복 저장 가능하도록 함.
