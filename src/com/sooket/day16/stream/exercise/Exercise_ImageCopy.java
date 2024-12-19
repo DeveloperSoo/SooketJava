@@ -16,49 +16,53 @@ public class Exercise_ImageCopy {
 	 */
 	
 	public static void main(String[] args) {
+				InputStream is = null;
+				OutputStream os = null; 
+		
 		try {
-			InputStream is = new FileInputStream("C:\\Windows\\Web\\Wallpaper\\Windows\\img0.jpg");
-			OutputStream os = new FileOutputStream("C:\\Temp\\Copying.jpg");
+			is = new FileInputStream("C:\\Windows\\Web\\Wallpaper\\Windows\\img0.jpg");
+			os = new FileOutputStream("C:\\Temp\\Copying.jpg");
 			
 			int readCount;
 			byte [] readBytes = new byte[1024];
-			readCount = is.read(readBytes);
-			String result = new String(readBytes, 0 , readCount);
-			//System.out.println(result);
-			is.close();
-			
-			System.out.println("복사는 된듯요");
-			
-			int writeCount;
-			byte [] writeBytes = result.getBytes();
-			os.write(writeBytes);
-			os.flush();
-			os.close();
-			
-			System.out.println("한번 확인해보셔야할듯요");
-			
-			
-			
-			
-			
-			
-			
+			while(true) {
+				readCount = is.read(readBytes);				
+				if(readCount == -1) break;			// 다 읽었으면 멈춰
+				// 읽은 내용은 몾겆기 파일에 저장해야해. 코드를 적어
+				os.write(readBytes , 0 , readCount);
+				/// flush() 해주어야해. 코드를 적어
+				os.flush();
+			}
+			System.out.println("파일 복사 완료");
 			
 		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
+		
 			e.printStackTrace();
+		} finally {
+			try {
+				os.close();
+				is.close();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 		}
-		
-		
-		
-		
-		
 	}
-	
-	
-	
-	
 }
+//String result = new String(cBuf, 0 , readCount);
+//is.close();
+
+//System.out.println("복사는 된듯요");
+//
+//int writeCount;
+//byte [] writeBytes = result.getBytes();
+//os.write(writeBytes);
+//os.flush();
+//os.close();
+//
+//System.out.println("한번 확인해보셔야할듯요");
+
+

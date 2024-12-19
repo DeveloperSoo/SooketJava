@@ -15,6 +15,21 @@ public class Exercise_TextFileCopy {
 	 */
 
 	public static void main(String[] args) {
+		/*
+		 * 파일을 복사하려고해
+		 * C드라이브 밑 Windows 폴더 밑에 system.ini파일을 복사하려고해
+		 * main() 메소드를 기준으로 생각했을때 해당 파일을 읽어야 하기
+		 * 때문에 입력스트림을 사용해야해.
+		 * 입력스트림을 사용해서 파일을 읽은 다음에 읽은 내용은
+		 * 목적지 C:\\Temp\\system.txt 파일에 써야해
+		 * main() 메소드를 기준으로 생각했을 때 해당 내용을 내보내야 하기
+		 * 때문에 출력스트림을 사용해야해
+		 * 출력스트림을 사용해서 읽은 내용은 system.txt 파일에 저장돼.
+		 * 출력스트림을 쓸 때에는 flush(), close()를 해주어야해
+		 * 둘중 하남나 해도 동작해. 그런데 우리는 다 써야해.
+		 * 
+		 */
+		
 		
 		try {
 			Reader fr = new FileReader("C:\\Windows\\system.ini");
