@@ -1,16 +1,16 @@
 package com.sooket.lss.workoutProject_second;
 
-public class WorkoutList {
+public class Workout {
 	private String part;
 	private String date;
 	private int set;
 	private int rep;
 	
-	public WorkoutList () {}
+	public Workout () {}
 	
 	
 	
-	public WorkoutList(String part, String date, int set , int rep) {
+	public Workout(String part, String date, int set , int rep) {
 		this.part = part;
 		this.date = date;
 		this.set = set;
