@@ -4,13 +4,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class WorkoutManage {
-	private List<Workout> list;
-
-	
+	private List<Workout> list;	
 	
 	
 	public WorkoutManage () {
 		list = new ArrayList<Workout>();
+
 	}
 	
 	public void saveWorkout(Workout workout) {
@@ -22,8 +21,9 @@ public class WorkoutManage {
 		return list;
 	}
 	
-	
-	
-	
-	
+	public void printDate(Workout workout) {
+		for(Workout work : list) {
+			
+		}
+	}
 }

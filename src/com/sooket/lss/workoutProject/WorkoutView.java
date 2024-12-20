@@ -28,6 +28,8 @@ public class WorkoutView {
 
 	
 	
+	
+	
 	public String startMenu () {
 		System.out.println("====Work out List====");
 		//System.out.println("1.회원가입");
@@ -38,8 +40,14 @@ public class WorkoutView {
 	}
 	
 	public void showMember(List<Member> member) {
+		
 		for(Member mem : member) {
-			System.out.println(mem.toString());			
+			System.out.println(mem.getName() + " 님의 운동기록은");			
+			for(int i = 0; i < 3; i++) {
+				System.out.println(mem.getList(i));
+			}
+			
+		
 		}
 	}
 

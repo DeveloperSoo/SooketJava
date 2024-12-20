@@ -5,13 +5,14 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Workout {
+		private String name;
 		private String part;
 		private String date;
 		private int set;
 		private int rep;
-		
 		private Scanner sc;
 		List<Workout> list ;
+		
 		public Workout () {
 			sc = new Scanner(System.in);
 			list = new ArrayList<Workout>();
@@ -29,6 +30,8 @@ public class Workout {
 		public Workout insertWorkout () {
 			Workout list = new Workout();
 			System.out.println("운동 등록");
+			System.out.print("이름 : ");
+			list.setName(sc.next());
 			System.out.print("날짜 : ");
 			list.setPart(sc.next());
 			System.out.print("부위 : ");
@@ -41,7 +44,13 @@ public class Workout {
 			return list;
 		}
 
-
+		public String getName() {
+			return name;
+		}
+		
+		public void setName(String name) {
+			this.name = name;
+		}
 
 		public String getPart() {
 			return part;

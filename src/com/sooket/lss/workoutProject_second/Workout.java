@@ -1,16 +1,18 @@
 package com.sooket.lss.workoutProject_second;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Workout {
-	private String part;
+	private int part;
 	private String date;
 	private int set;
 	private int rep;
+	private List <DetailPart> detail = new ArrayList<DetailPart>();
 	
 	public Workout () {}
 	
-	
-	
-	public Workout(String part, String date, int set , int rep) {
+	public Workout(int part, String date, int set , int rep) {
 		this.part = part;
 		this.date = date;
 		this.set = set;
@@ -19,13 +21,11 @@ public class Workout {
 
 
 
-	public String getPart() {
+	public int getPart() {
 		return part;
 	}
 
-
-
-	public void setPart(String part) {
+	public void setPart(int part) {
 		this.part = part;
 	}
 
@@ -36,32 +36,23 @@ public class Workout {
 	public void setDate(String date) {
 		this.date = date;
 	}
-	
 
 	public int getSet() {
 		return set;
 	}
 
-
-
 	public void setSet(int set) {
 		this.set = set;
 	}
-
-
 
 	public int getRep() {
 		return rep;
 	}
 
-
-
 	public void setRep(int rep) {
 		this.rep = rep;
 	}
 	
-
-
 
 	@Override
 	public String toString() {
